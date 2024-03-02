@@ -134,7 +134,7 @@ body {
     }
   }
 
-  /* header */
+  /* header logo*/
   .header {
     transition: all 0.5s;
     z-index: 997;
@@ -175,4 +175,12 @@ body {
   .sticked-header-offset {
     margin-top: 70px;
   }
+
+  @media (max-width: 575px) {
+    .header {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
   
