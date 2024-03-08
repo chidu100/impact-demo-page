@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
@@ -30,14 +31,212 @@
 <!-- Header -->
 <header id="header" class="header">
 
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid">
       <a href="index.html" class="logo .sticked-header-offset sticked">
         <h1>Impact<span>.</span></h1>
       </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> &#x25BC</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> &#x25BC</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container-row position-relative">
+      <div class="row">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Welcome to <span>Impact</span></h2>
+          <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="./img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container-row position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-3 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Lorem Ipsum</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-gem"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Sed ut perspiciatis</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Magni Dolores</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-command"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Nemo Enim</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+      
+
+     
+
+<script>
+ /**
+   * Sticky Header on Scroll
+   */
+   const selectHeader = document.querySelector('#header');
+  if (selectHeader) {
+    let headerOffset = selectHeader.offsetTop;
+    let nextElement = selectHeader.nextElementSibling;
+
+    const headerFixed = () => {
+      if ((headerOffset - window.scrollY) <= 0) {
+        selectHeader.classList.add('sticked');
+        if (nextElement) nextElement.classList.add('sticked-header-offset');
+      } else {
+        selectHeader.classList.remove('sticked');
+        if (nextElement) nextElement.classList.remove('sticked-header-offset');
+      }
+    }
+    window.addEventListener('load', headerFixed);
+    document.addEventListener('scroll', headerFixed);
+  }
+
+  /**
+   * Navbar links active state on scroll
+   */
+  let navbarlinks = document.querySelectorAll('#navbar a');
+
+  function navbarlinksActive() {
+    navbarlinks.forEach(navbarlink => {
+
+      if (!navbarlink.hash) return;
+
+      let section = document.querySelector(navbarlink.hash);
+      if (!section) return;
+
+      let position = window.scrollY + 200;
+
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        navbarlink.classList.add('active');
+      } else {
+        navbarlink.classList.remove('active');
+      }
+    })
+  }
+  window.addEventListener('load', navbarlinksActive);
+  document.addEventListener('scroll', navbarlinksActive);
+
+  /**
+   * Mobile nav toggle
+   */
+  const mobileNavShow = document.querySelector('.mobile-nav-show');
+  const mobileNavHide = document.querySelector('.mobile-nav-hide');
+
+  document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
+    el.addEventListener('click', function(event) {
+      event.preventDefault();
+      mobileNavToogle();
+    })
+  });
+
+  function mobileNavToogle() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    mobileNavShow.classList.toggle('d-none');
+    mobileNavHide.classList.toggle('d-none');
+  }
+
+  /**
+   * Hide mobile nav on same-page/hash links
+   */
+  document.querySelectorAll('#navbar a').forEach(navbarlink => {
+
+    if (!navbarlink.hash) return;
+
+    let section = document.querySelector(navbarlink.hash);
+    if (!section) return;
+
+    navbarlink.addEventListener('click', () => {
+      if (document.querySelector('.mobile-nav-active')) {
+        mobileNavToogle();
+      }
+    });
+
+  });
+
+  /**
+   * Toggle mobile nav dropdowns
+   */
+  const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+
+  navDropdowns.forEach(el => {
+    el.addEventListener('click', function(event) {
+      if (document.querySelector('.mobile-nav-active')) {
+        event.preventDefault();
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('dropdown-active');
+
+        let dropDownIndicator = this.querySelector('.dropdown-indicator');
+        dropDownIndicator.classList.toggle('bi-chevron-up');
+        dropDownIndicator.classList.toggle('bi-chevron-down');
+      }
+    })
+  });
 
 
-
-
+</script>
 
 </body>
 </html>
