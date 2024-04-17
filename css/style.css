@@ -157,9 +157,9 @@ padding-top: 10px;
     top: 0;
     z-index: 2;
     transition: all 0.5s;
-    height: 90px;
+    height: 60px;
     background-color: var(--color-primary);
-    padding-top: 10px;
+    padding-bottom: 5px;
     display: flex;
     align-items: center;
  }
@@ -960,8 +960,8 @@ padding-top: 10px;
 
 .carousel img {
   height: auto;
-  width: 180px;
-  margin-left: 40px;
+  width: 100px;
+  margin-left: 130px;
   transition: 0.3s;
 }
 
@@ -1019,21 +1019,28 @@ padding-top: 10px;
 
 .stats-items {
   display: flex;
-  align-items: center:
+  align-items: center;
 }
 
-.shift{
-  margin-top: 50px;
-  padding-left: 90px;
+/* Adjust the size and position of the SVG image */
+.svg-left {
+  max-width: 100%;
+  height: auto;
+  float: left;
 }
 
-.shift-ways{
-  padding-right: 30px;
+/* Push the content to the right */
+.shift {
+  float: right;
 }
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
+
+
+
 .call-to-action .container {
   display: flex; 
   flex-direction: column; 
@@ -1042,10 +1049,11 @@ padding-top: 10px;
   text-align: center; 
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center;
   background-size: cover;
-  padding: 100px 60px;
+  padding: 100px 100px;
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 50px;
+  width: calc(100% - 200px);
 }
 
 .call-to-action h3 {
@@ -1166,8 +1174,8 @@ padding-top: 10px;
 
 /* Container holding the sections */
 .services .containers {
-  padding-right: calc(var(--bs-gutter-x)* .5);
-  padding-left: calc(var(--bs-gutter-x)* .5);
+  padding-right: 100px;
+  padding-left: 100px;
   margin-right: auto;
   margin-left: auto;
   width: 1320px;
