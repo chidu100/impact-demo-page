@@ -65,8 +65,8 @@ body {
  .container,.container-fluid{
     display: flex;
     justify-content: center;
-    padding-right: calc(var(--bs-gutter-x)*.5);
-    padding-left: calc(var(--bs-gutter-x)*.5);
+    padding-left: 100px;
+    padding-right: 100px;
     margin-right: auto;
     margin-left: auto;
     width: 1320px;
@@ -657,7 +657,7 @@ padding-top: 10px;
   overflow: hidden;
   z-index: 1;
   height: 100%;
-  width: 300px;
+  width: 260px;
   text-align: center;
 }
 
@@ -867,7 +867,7 @@ padding-top: 10px;
 }
 
 .container-stands {
-  padding: 0 250px;
+  padding: 0 100px;
 }
 
 .second-about {
@@ -914,50 +914,69 @@ padding-top: 10px;
 # Clients Section
 --------------------------------------------------------------*/
 .clients {
-  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 100px;
+  min-height: 20vh;
+}
+.wrapper {
+  max-width: 1200px;
+  position: relative;
 }
 
-.clients .swiper {
-  padding: 10px 0;
+.wrapper i {
+  top: 70%;
+  position:absolute;
+  height: 50px;
+  width: 50px;
+  background: #008374;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  transform: translateY(-50%);
 }
 
-.clients .swiper-slide img {
+.wrapper i:first-child {
+  left: -23px;
+}
+
+.wrapper i:last-child {
+  right: -23px;
+}
+
+.wrapper i:hover {
+  background: #fff;
+  color: var(--color-default);
+}
+
+.wrapper .carousel {
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.carousel img {
+  height: auto;
+  width: 180px;
+  margin-left: 40px;
   transition: 0.3s;
 }
 
-.clients .swiper-slide img:hover {
+.carousel img:hover {
   transform: scale(1.1);
 }
 
-
-.swiper-slide {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.carousel img:first-child {
+  margin-left: 0;
 }
 
-/* Ensure the swiper-wrapper does not wrap items */
-.clients .swiper-wrapper {
-  display: flex;
-  flex-wrap: nowrap; 
-  justify-content: center; 
-  align-items: center; 
-  overflow-x: none; 
-}
-
-/* Adjust swiper-slide items */
-.clients .swiper-slide {
-  flex: 0 0 auto;
-  width: 165px;
-}
-
-/* Style the images within swiper-slide for consistent sizing */
-.clients .swiper-slide img {
-  max-width: 100%;
-  height: auto; 
-  display: inline; 
-  padding: 0 20px;
-  margin: 0 auto; 
+@media screen and (max-width: 900px) {
+  .carousel img { 
+      width: 100%;
+  }
 }
 /* end of client */
 
