@@ -98,6 +98,7 @@
     <div class="container position-relative">
       <div class="row gy-4 mt-5">
 
+
         <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-easel"></i></div>
@@ -330,20 +331,20 @@
 
 <!-- ======= Testimonials Section ======= -->
 <section id="testimonials" class="testimonials">
-  <div class="container" data-aos="fade-up">
+  <div class="container-stands" data-aos="fade-up">
 
-      <div class="section-header">
+      <div class="section-headers">
           <h2>Testimonials</h2>
           <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos quam</p>
       </div>
 
-      <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="slides-3 swiper slide-container" data-aos="fade-up" data-aos-delay="100">
+        <i id="arrow-left" class="bi bi-arrow-left-short"></i>
           <div class="swiper-wrapper">
+              <div class="swiper-slide slide-content card-wrapper swiper-wrapper">
 
-              <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                      <div class="testimonial-item">
-                          <div class="d-flex align-items-center">
+                      <div class="testimonial-item card swiper-slide">
+                          <div class="card-top d-flex align-items-center">
                               <img src="./img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0" alt="">
                               <div>
                                   <h3>Saul Goodman</h3>
@@ -359,37 +360,36 @@
                               <i class="bi bi-quote quote-icon-right"></i>
                           </p>
                       </div>
-                  </div>
               </div>
               <!-- End testimonial item -->
 
               <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                      <div class="testimonial-item">
-                          <div class="d-flex align-items-center">
-                              <img src="./img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0" alt="">
-                              <div>
-                                  <h3>Sara Wilsson</h3>
-                                  <h4>Designer</h4>
-                                  <div class="stars">
-                                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                  </div>
-                              </div>
-                          </div>
-                          <p>
-                              <i class="bi bi-quote quote-icon-left"></i> Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                              legam anim culpa.
-                              <i class="bi bi-quote quote-icon-right"></i>
-                          </p>
+                <div class="testimonial-wrap">
+                  <div class="testimonial-item">
+                    <div class="d-flex align-items-center">
+                      <img src="./img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Sara Wilsson</h3>
+                        <h4>Designer</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
                       </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
                   </div>
+                </div>
               </div>
               <!-- End testimonial item -->
+  
 
               <div class="swiper-slide">
-                  <div class="testimonial-wrap">
                       <div class="testimonial-item">
-                          <div class="d-flex align-items-center">
+                          <div class="card-top d-flex align-items-center">
                               <img src="./img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0" alt="">
                               <div>
                                   <h3>Jena Karlis</h3>
@@ -404,14 +404,12 @@
                               <i class="bi bi-quote quote-icon-right"></i>
                           </p>
                       </div>
-                  </div>
               </div>
               <!-- End testimonial item -->
 
               <div class="swiper-slide">
-                  <div class="testimonial-wrap">
                       <div class="testimonial-item">
-                          <div class="d-flex align-items-center">
+                          <div class="card-top d-flex align-items-center">
                               <img src="./img/testimonials/testimonials-4.jpg" class="testimonial-img flex-shrink-0" alt="">
                               <div>
                                   <h3>Matt Brandon</h3>
@@ -426,14 +424,12 @@
                               <i class="bi bi-quote quote-icon-right"></i>
                           </p>
                       </div>
-                  </div>
               </div>
               <!-- End testimonial item -->
 
               <div class="swiper-slide">
-                  <div class="testimonial-wrap">
                       <div class="testimonial-item">
-                          <div class="d-flex align-items-center">
+                          <div class="card-top d-flex align-items-center">
                               <img src="./img/testimonials/testimonials-5.jpg" class="testimonial-img flex-shrink-0" alt="">
                               <div>
                                   <h3>John Larson</h3>
@@ -449,12 +445,11 @@
                               <i class="bi bi-quote quote-icon-right"></i>
                           </p>
                       </div>
-                  </div>
               </div>
               <!-- End testimonial item -->
 
           </div>
-          <div class="swiper-pagination"></div>
+          <i id="arrow-right" class="bi bi-arrow-right-short"></i>
       </div>
 
   </div>
@@ -468,31 +463,29 @@
 
   
 <script>
- 
-  /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = document.querySelectorAll('#navbar a');
 
-  function navbarlinksActive() {
-    navbarlinks.forEach(navbarlink => {
+document.addEventListener('DOMContentLoaded', function() {
+    const arrowLeft = document.getElementById('arrow-left');
+    const arrowRight = document.getElementById('arrow-right');
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-      if (!navbarlink.hash) return;
+    arrowLeft.addEventListener('click', function() {
+        swiperWrapper.scrollBy({
+            left: -300, // Scroll left by the width of the slide or desired px
+            behavior: 'smooth'
+        });
+    });
 
-      let section = document.querySelector(navbarlink.hash);
-      if (!section) return;
+    arrowRight.addEventListener('click', function() {
+        swiperWrapper.scrollBy({
+            left: 300, // Scroll right by the width of the slide or desired px
+            behavior: 'smooth'
+        });
+    });
+});
 
-      let position = window.scrollY + 200;
 
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active');
-      } else {
-        navbarlink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive);
-  document.addEventListener('scroll', navbarlinksActive);
+
 
   /**
    * Mobile nav toggle

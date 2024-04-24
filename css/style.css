@@ -723,6 +723,11 @@ padding-top: 10px;
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
+.about{
+  padding: 60px 0;
+}
+
+
 .about h3 {
   font-weight: 700;
   font-size: 28px;
@@ -1172,6 +1177,10 @@ padding-top: 10px;
 
  /* OUR SERVICE SECTION */
 
+ .services {
+   padding: 100px 0;
+ }
+
 /* Container holding the sections */
 .services .containers {
   padding-right: 100px;
@@ -1319,3 +1328,129 @@ padding-top: 10px;
 .services .service-item:hover h3 {
   border-color: var(--color-primary);
 }
+
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+
+.testimonials {
+  padding: 100px 0 100px 0;
+  background-color: #EFEFEF;
+}
+
+.testimonials .container-stands{
+  max-width: 1320px;
+  width: 100%;
+  padding: 40px 100px;
+}
+
+
+.testimonial-item {
+  box-sizing: content-box;
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  margin: 30px 10px;
+  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #000;
+}
+
+.testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 18px;
+  margin-top: 4px; /* aligns stars with the title */
+}
+
+.quote-icon-left, .quote-icon-right {
+  color: #009d8b;
+  font-size: 26px;
+  line-height: 0;
+}
+
+.testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+  transform: scale(-1, -1);
+}
+
+.testimonial-item p {
+  font-style: italic;
+  margin: 15px auto 15px auto;
+}
+
+
+
+.slides-3.swiper.slide-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#arrow-left, #arrow-right {
+  height: auto;
+  width: 50px;
+  background: #008374;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+#arrow-left:hover, #arrow-right:hover {
+  background: #fff;
+  color: var(--color-default);
+}
+
+.swiper-wrapper {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.swiper-slide {
+  flex-shrink: 0; /* Prevents the flex items from shrinking */
+  margin-right: 15px; 
+  /* Adds spacing between slides */
+}
+
+

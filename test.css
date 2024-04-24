@@ -1,0 +1,26 @@
+.testimonials .testimonial-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Keeps the inner divs from spilling out */
+  }
+  
+  .testimonials .testimonial-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform; /* Optimizes the property to be changed */
+  }
+  
+  .testimonials .scroll-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #efefef;
+    border: none;
+    outline: none;
+  }
+  
+  .testimonials .testimonial-item {
+    flex: 0 0 200px; /* Prevents flex items from growing or shrinking */
+    margin: 0 10px; /* Adds space between items */
+  }
+  

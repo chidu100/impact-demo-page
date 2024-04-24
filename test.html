@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="testimonials" class="testimonials">
+        <div class="container-stands">
+      
+            <div class="section-headers">
+                <h2>Testimonials</h2>
+                <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos quam</p>
+            </div>
+      
+            <div class="testimonial-container">
+                <button class="scroll-btn left-btn">←</button>
+                <div class="testimonial-wrapper">
+                    <!-- Testimonial items here (same as your current divs) -->
+                </div>
+                <button class="scroll-btn right-btn">→</button>
+            </div>
+      
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const wrapper = document.querySelector('.testimonial-wrapper');
+  const btnLeft = document.querySelector('.left-btn');
+  const btnRight = document.querySelector('.right-btn');
+
+  btnRight.addEventListener('click', () => {
+    wrapper.scrollLeft += 210; // Adjust this value based on your item width and margin
+  });
+
+  btnLeft.addEventListener('click', () => {
+    wrapper.scrollLeft -= 210; // Same adjustment as above
+  });
+});
+
+      </script>
+      
+</body>
+</html>
