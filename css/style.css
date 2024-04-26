@@ -546,13 +546,6 @@ padding-top: 10px;
   .col-lg-6 {
     justify-content: flex-start;
   }
-
-  .hero h2 {
-    font-size: 36px; /* Smaller font size on smaller screens */
-  }
-  .hero p {
-    font-size: 16px; /* Adjust paragraph font size */
-  }
 }
 
 /* Buttons Styling */
@@ -620,6 +613,7 @@ padding-top: 10px;
     max-width: 50%;
     height: auto;
   }
+  
 }
  /* done with hero */
 
@@ -989,44 +983,6 @@ padding-top: 10px;
       width: 100%;
   }
 }
-
-/* Adjustments for medium devices (tablets, large phones, etc.) */
-@media (max-width: 992px) {
-  .clients {
-    padding: 30px 50px; /* Reduce padding */
-  }
-
-  .wrapper {
-    padding: 0 20px; /* Reduce wrapper padding */
-  }
-
-  .carousel img {
-    width: 80px; /* Reduce image width */
-    margin-left: 100px; /* Reduce margin */
-  }
-}
-
-/* Adjustments for small devices (phones, small tablets, etc.) */
-@media (max-width: 768px) {
-  .clients {
-    padding: 20px 20px; /* Further reduce padding */
-  }
-
-  .wrapper {
-    padding: 0; /* Remove wrapper padding */
-    overflow-x: auto; /* Allow horizontal scrolling for smaller screens */
-  }
-
-  .wrapper i {
-    display: none; /* Hide arrows on small screens */
-  }
-
-  .carousel img {
-    width: 70px; /* Further reduce image width */
-    margin-left: 10px; /* Adjust margin */
-  }
-}
-
 /* end of client */
 
 /*--------------------------------------------------------------
@@ -1081,74 +1037,6 @@ padding-top: 10px;
 /* Push the content to the right */
 .shift {
   float: right;
-}
-
-
-@media (max-width: 992px) {
-  .stats-counter {
-    padding: 30px 0; 
-  }
-
-  .stats-counter .stats-item {
-    padding: 15px 0; 
-  }
-
-  .stats-counter .stats-item i {
-    font-size: 34px; 
-    margin-right: 10px;
-  }
-
-  .stats-counter .stats-item span {
-    font-size: 34px; 
-    line-height: 34px;
-  }
-
-  .stats-counter .stats-item p {
-    font-size: 13px; 
-  }
-
-  .stats-items {
-    flex-wrap: wrap; 
-  }
-
-  .svg-left, .shift {
-    float: left; 
-    width: auto; 
-}
-
-
-@media (max-width: 768px) {
-  .stats-counter {
-    padding: 20px 0; 
-  }
-
-  .stats-counter .stats-item {
-    padding: 10px 0; 
-    border-bottom: none; 
-  }
-
-  .stats-counter .stats-item i {
-    font-size: 30px; 
-    margin-right: 5px; 
-  }
-
-  .stats-counter .stats-item span {
-    font-size: 30px;
-    line-height: 30px; 
-  }
-
-  .stats-counter .stats-item p {
-    font-size: 12px; 
-  }
-
-  .stats-items {
-    display: block; 
-  }
-
-  .svg-left, .shift {
-    float: left; 
-    width: 100%; 
-  }
 }
 
 
